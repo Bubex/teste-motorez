@@ -25,13 +25,13 @@ cd teste-motorez
 Use o Docker Compose para construir e iniciar os contêineres. Esse comando executará ```docker-compose up --build -d```.
 
 ```bash
-npm run docker:init
+docker-compose up --build -d
 ```
 
 ### 3. Rodar as migrations e seedar o banco
 
 ```bash
-npm run docker:bash
+docker-compose exec app bash
 php artisan migrate
 php artisan db:seed
 php artisan queue:work
