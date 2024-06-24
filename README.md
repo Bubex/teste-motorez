@@ -33,6 +33,7 @@ docker-compose up --build -d
 ```bash
 docker-compose exec app bash
 composer install
+npm run build
 php artisan migrate
 php artisan db:seed
 php artisan queue:work
