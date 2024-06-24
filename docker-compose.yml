@@ -1,0 +1,55 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: motorez_app
+        volumes:
+            - .:/var/www/html
+        ports:
+            - "9000:9000"
+        networks:
+            - network
+
+    webserver:
+        image: nginx:alpine
+        container_name: motorez_ws
+        volumes:
+            - .:/var/www/html
+            - ./nginx.conf:/etc/nginx/conf.d/default.conf
+        ports:
+            - "8080:80"
+        depends_on:
+            - app
+        networks:
+            - network
+
+    db:
+        image: mysql:5.7
+        container_name: motorez_db
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: laravel
+            MYSQL_USER: laravel
+            MYSQL_PASSWORD: secret
+        ports:
+            - "3306:3306"
+        networks:
+            - network
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: motorez_phpmyadmin
+        environment:
+            PMA_HOST: db
+            MYSQL_ROOT_PASSWORD: root
+        ports:
+            - "8081:80"
+        depends_on:
+            - db
+        networks:
+            - network
+
+networks:
+    network:
+        driver: bridge

@@ -1,0 +1,63 @@
+{
+    "veiculos": [
+        {
+            "id": 12345,
+            "marca": "Chevrolet",
+            "modelo": "Onix",
+            "ano": 2024,
+            "versao": "LT",
+            "cor": "Branco",
+            "km": 10000,
+            "combustivel": "Gasolina",
+            "cambio": "Automático",
+            "portas": 4,
+            "preco": 85000.0,
+            "date": "2024-06-11 19:30:21",
+            "opcionais": [
+                "Ar condicionado",
+                "Vidros elétricos",
+                "Direção hidráulica",
+                "Travas elétricas"
+            ]
+        },
+        {
+            "id": 67890,
+            "marca": "Fiat",
+            "modelo": "Argo",
+            "ano": 2023,
+            "versao": "Trek",
+            "cor": "Prata",
+            "km": 20000,
+            "combustivel": "Flex",
+            "cambio": "Manual",
+            "portas": 4,
+            "preco": 72000.0,
+            "date": "2024-06-14 07:20:41",
+            "opcionais": [
+                "Ar condicionado",
+                "Vidros elétricos",
+                "Direção hidráulica"
+            ]
+        },
+        {
+            "id": 23456,
+            "marca": "Volkswagen",
+            "modelo": "T-Cross",
+            "ano": 2022,
+            "versao": "Comfortline",
+            "cor": "Preto",
+            "km": 30000,
+            "cambio": "Automático",
+            "portas": 5,
+            "preco": 98000.0,
+            "date": "2024-06-14 09:15:01",
+            "opcionais": [
+                "Ar condicionado",
+                "Vidros elétricos",
+                "Direção hidráulica",
+                "Teto solar",
+                "Faróis de LED"
+            ]
+        }
+    ]
+}
